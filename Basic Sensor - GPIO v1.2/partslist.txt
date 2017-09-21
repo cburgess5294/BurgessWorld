@@ -1,0 +1,59 @@
+Partlist
+
+Exported from basic_sensor gpio_parallel_v1.2_3v3BOOST.brd at 5/7/2017 8:17 PM
+
+EAGLE Version 8.1.1 Copyright (c) 1988-2017 Autodesk, Inc.
+
+Assembly variant: 
+
+Part          Value               Package                Library                        Position (mil)        Orientation
+
+3V3_BOOST     POLOLU-U1V11F3      4-PIN MODULE           my-custom-lib                  (466 2021)            R0
+3V3_SHDN                          MA03-1                 my-custom-lib                  (721 1328)            R270
+(OPT1)5VLDO   MCP1826S-5002E/AB   TO254P482X1024X3124-3P Microchip_By_element14_Batch_1 (1778 1642)           R0
+(OPT2)5VBOOST U3V12F5		  3-PIN MODULE
+(OPT3)5VBOOST S9V11F5		  3-PIN MODULE
+ATMEGA328P    ATMEGA328P-PU       DIP254P762X457-28      Atmel_By_element14_Batch_1-00  (1170.37795 192.18898) R0
+C1            .1uf                C2.5-2                 capacitor-wima                 (1837.07087 1457.88189) R270
+C2            470uF               E2,5-6E                rcl                            (1509.88976 2003.37008) R180
+C3            4.7uf               C2.5-2                 capacitor-wima                 (1535 1825)           R0
+C4            18pf                C2.5-2                 capacitor-wima                 (701.32283 306.92126) R0
+C5            18pf                C2.5-2                 capacitor-wima                 (615.25984 986.66142) R90
+C6            .1uf                C2.5-2                 capacitor-wima                 (1413 987)            R270
+C7            .1uf                C2.5-2                 capacitor-wima                 (729.74803 985.5748)  R270
+C8            .1uf                C2.5-2                 capacitor-wima                 (1298 987)            R90
+C9            100uF               E2,5-6E                rcl                            (1358 718)            R90
+C10           .1uf                C2.5-2                 capacitor-wima                 (1619 1457)           R90
+C11           33uF                E2,5-6E                rcl                            (817 1704)            R90
+C12           1uf                 C2.5-2                 capacitor-wima                 (1728 1457)           R270
+D1            1N4148DO35-10       DO35-10                diode                          (1151 1605)           R180
+DHT-22/DHT-11 DHT-22              RHT03_DHT-22           RHT03_DHT-22_AM2302            (454.15748 1064.80315) R270
+ESP1          ESP01               ESP01                  esp8266modules                 (1287.11024 2510.37008) R0
+FLASH                             DTS-6                  switch-tact                    (816.25984 2738.11024) R180
+GPIO                              MA03-2                 my-custom-lib                  (465 1616)            R0
+ICSP                              MA03-2                 con-lstb                       (1708 771)            R90
+LD1           2.3v                DUOLED-C-5MM           led                            (1754 472)            R90
+PRG_ESP                           MA03-1                 my-custom-lib                  (845 2400)            R90
+PROG/DEBUG                        MA05-1                 con-lstb                       (1771.11024 2043)     R270
+PWR                               MA03-1                 my-custom-lib                  (471 1872)            R0
+Q1            8MHZ                QS                     special                        (705.4252 608.44882)  R270
+R1            4.7k                0207/7                 rcl                            (1171 1703)           R180
+R2            340                 0207/7                 rcl                            (1648 2440)           R270
+R3            340                 0207/7                 rcl                            (441 2713.88976)      R0
+R4            220                 0207/7                 rcl                            (427 1418)            R0
+R5            1K                  0207/7                 rcl                            (1038.30709 1950.88976) R270
+R6            1K                  0207/7                 rcl                            (1137.62992 1950.96063) R90
+R7            2.7K                0207/7                 rcl                            (1238.25197 1950.51969) R270
+R8            220                 0207/7                 rcl                            (1533 900)            R270
+R9            0 ohms              0207/7                 rcl                            (1338.18898 1950.1811) R90
+R10           10K                 0207/7                 rcl                            (1293 1298)           R270
+R11           100k                0207/7                 rcl                            (1396 1298)           R270
+R12           300k                0207/7                 rcl                            (1499 1298)           R270
+R13           4.7                 0207/7                 rcl                            (1015 86)             R0
+RESET         DTS-6               DTS-6                  switch-tact                    (1429 399)            R180
+RUN/FLASH     9450-2              9450-2                 switch-misc                    (828.34646 1994.15748) R270
+SENS1                             MA03-1                 my-custom-lib                  (323 1066)            R270
+SENSOR2                           MA03-1                 my-custom-lib                  (355 518)             R270
+SENSOR3                           MA03-1                 my-custom-lib                  (501 519)             R270
+VCC_SRC                           MA03-1                 my-custom-lib                  (1771 2531)           R270
+VIN           MOLEX               6410-02                con-molex                      (1714 1140)           R90
