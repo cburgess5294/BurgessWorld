@@ -1,2 +1,8 @@
 This directory contains Arduino sketches for use with NodeMCU Sensor Shield v1 from BurgessWorld Custom Electroics tindie store
 https://tindie.com/stores/cburgess129
+
+Sketch NodeMCU_Sensor_Shield_CORE_V1.ino gets loaded onto the NodeMCU Sensor Board
+This requires the use of a USB-Serial Adapter.
+NOTE:  This sketch comes pre-loaded on the Sensor Board when shipped
+
+The 
