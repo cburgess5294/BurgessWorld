@@ -8,12 +8,12 @@ goodTrans = 0;
 badTrans = 0;
 spi = spidev.SpiDev()
 spi.open(0, 1)
-#spi.max_speed_hz = 976000
+spi.max_speed_hz = 976000
 try:
   while True:
     stamp += 1
     returned = 0x00
-    spi.xfer2([0x68,0x65,0x6c,0x6c,0x6f,0x21,0xfe])# transfer data and check for reply 
+    spi.xfer2([0x68,0x65,0x6c,0x6c,0x6f,0xfe])# transfer data and check for reply 
     while returned == 0x00:# wait for the ardunio to reply
       time.sleep(.001)# delay to prevent overloading arduino buffer
       returned = spi.xfer2([0x00])[0]# check for reply 
