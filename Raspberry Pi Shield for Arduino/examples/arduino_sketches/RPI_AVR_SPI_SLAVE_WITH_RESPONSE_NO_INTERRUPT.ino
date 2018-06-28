@@ -48,7 +48,7 @@ void loop() {
         word1 = SPDR;
         if (word1 != 0x00){//if returned byte = 0, discard it
           if (word1 == 0xfe){//if returned byte = 254, we have reached the end of the data
-            if (count == 6){//if we captured all of the data...
+            if (count == 5){//if we captured all of the data...
               SPDR = 0x01; //send a 1 back to master to indicate a good transaction
             }
             else{
@@ -66,7 +66,7 @@ void loop() {
        }    
     }
    if (process_it){
-      Serial.print (buf);  // prints out the rreceived character buffer if it was a good transaction
+      Serial.write (buf);  // prints out the rreceived character buffer if it was a good transaction
       Serial.println (stamp);  //prints out the iteration number of the transaction
       buf [pos] = 0; // empty received character buffer
       pos = 0; // reset 
