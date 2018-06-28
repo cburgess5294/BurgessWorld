@@ -1,4 +1,24 @@
-
+/*  This sketch is for use with the Raspberry Pi Arduino-Shield by created by 
+ *   BurgessWorld Custom Electronics.  It uses SPI to communicate between a
+ *   Raspberry Pi Zero or Zero W and an Arduino-Teensy (with Teensy 3.1/3.2) v4.x or v5.x available from 
+ *   my Tindie shop at the link below:
+ *   
+ *   https://www.tindie.com/products/cburgess129/arduino-teensy-v44-with-wifibluetoothnrf24l01/
+ *   
+ *   This sketch implements a hybrid muulti-master mode between the Raspberry Pi and Teensy and requires
+ *   the MISO and MOSI lines to be crossed.
+ *   
+ *   Raspberry Pi           Teensy 3.1/3.2
+ *   -------------------------------------
+ *   MISO           -->     MOSI
+ *   MOSI           -->     MISO
+ *   SCK            -->     SCK
+ *   CE1            -->     10
+ *   
+ *   You will have to remove the jumpes from the MISO and MOSI pin bridge and make connections with
+ *   the included jumper wires
+ *   
+ */
 #include <t3spi.h>
 
 //Initialize T3SPI class as SPI_SLAVE
