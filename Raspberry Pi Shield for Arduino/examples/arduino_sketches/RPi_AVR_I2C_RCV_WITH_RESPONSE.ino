@@ -11,7 +11,7 @@
 String recBuf = "";
 
 void setup() {
-  Wire.begin(7);                // join i2c bus with address #8
+  Wire.begin(8);                // join i2c bus with address #8
   //Wire.setClock(50000);         // set I2C clock lower to reduce I2C errors on Raspberry pi (you can play with this value)
   Wire.onReceive(receiveEvent); // register event when data received
   Wire.onRequest(sendData);     // wait for request from master before sending Ack
