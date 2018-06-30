@@ -16,6 +16,7 @@ void setup() {
   Wire.onReceive(receiveEvent); // register event when data received
   Wire.onRequest(sendData);     // wait for request from master before sending Ack
   Serial.begin(115200);         // start serial for output
+  Serial.println("I2C Receiver v1.0");
 }
 
 void loop() {
