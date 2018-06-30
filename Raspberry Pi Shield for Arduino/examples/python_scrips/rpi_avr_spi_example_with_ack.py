@@ -15,7 +15,7 @@ try:
     returned = 0x00
     spi.xfer2([0x68,0x65,0x6c,0x6c,0x6f,0xfe])# transfer data and check for reply 
     while returned == 0x00:# wait for the ardunio to reply
-      time.sleep(.001)# delay to prevent overloading arduino buffer
+      time.sleep(.005)# delay to prevent overloading arduino buffer
       returned = spi.xfer2([0x00])[0]# check for reply 
     if returned == 0x01:
       print("good trans %d" % stamp)
