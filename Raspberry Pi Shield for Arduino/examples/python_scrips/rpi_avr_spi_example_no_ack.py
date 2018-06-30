@@ -12,7 +12,4 @@ try:
    time.sleep(.025)
 except KeyboardInterrupt: # Ctrl+C pressed
    spi.close()
-   print("---------------")
-   print("good trans: %d" %  goodTrans)
-   print("bad trans: %d" % badTrans)
 
