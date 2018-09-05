@@ -25,7 +25,7 @@ charBuf = ""
 while True:
   for byte in bytelist:
     bus.write_byte(DEVICE_ADDRESS, byte)
-    charBuf = charBuf + chr(bus.read_byte(DEVICE_ADDRESS)) 
+    charBuf  = charBuf + chr(bus.read_byte(DEVICE_ADDRESS))
     count = count + 1
     if count == 5:
       print charBuf
