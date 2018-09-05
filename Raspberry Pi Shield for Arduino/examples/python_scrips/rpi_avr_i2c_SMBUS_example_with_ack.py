@@ -24,6 +24,6 @@ ack = 0
 while True:
   for byte in bytelist:
     bus.write_byte(DEVICE_ADDRESS, byte)
-  while bus.read_byte(DEVICE_ADDRESS) != 0x02: 
+  while bus.read_byte(DEVICE_ADDRESS) != 0x01: 
     pass
   time.sleep(.010)
