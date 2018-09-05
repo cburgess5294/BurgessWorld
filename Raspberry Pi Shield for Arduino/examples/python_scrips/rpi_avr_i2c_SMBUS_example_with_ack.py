@@ -19,9 +19,11 @@ def StringToBytes(val):
 
 byteString = ("hello")
 bytelist = StringToBytes(byteString)
+ack = 0 
 
 while True:
   for byte in bytelist:
     bus.write_byte(DEVICE_ADDRESS, byte)
-  while bus.read_byte(DEVICE_ADDRESS) != 1:
+  while bus.read_byte(DEVICE_ADDRESS) != 0x02: 
     pass
+  time.sleep(.010)
