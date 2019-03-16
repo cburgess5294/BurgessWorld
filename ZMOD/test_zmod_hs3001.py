@@ -34,6 +34,12 @@ def exitState():
 def checkSensors():
   ledBlue.off()
   ledAmber.off()
+  sleep(.5)
+  ledBlue.on()
+  ledAmber.on()
+  sleep(.5)
+  ledBlue.off()
+  ledAmber.off()
   try:
     sleep(2)
     bus.write_quick(0x32) # wake sensor up and take a reading
@@ -69,6 +75,10 @@ def checkSensors():
   ledReady.off()
   sleep(.500)
   ledReady.on()
+
+  sleep(5)
+  ledAmber.off()
+  ledBlue.off() 
 
 atexit.register(exitState)# turn off LEDs on exit 
 
