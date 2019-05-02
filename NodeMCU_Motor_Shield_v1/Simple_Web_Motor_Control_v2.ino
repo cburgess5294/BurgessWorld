@@ -25,8 +25,8 @@
 #include <Wire.h>
 #include <Adafruit_MotorShield_MOD_CB.h>
 
-const char* ssid     = "BURGESSWORLD1";
-const char* password = "thisistherouterpassword";
+const char* ssid     = "<YOUR SSID>";
+const char* password = "<YOUR PASSWORD>";
 
 WiFiServer server(80);
 
