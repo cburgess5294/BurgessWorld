@@ -1,10 +1,11 @@
 /* 
-This is a test sketch for the Adafruit assembled Motor Shield for Arduino v2
-It won't work with v1.x motor shields! Only for the v2's with built in PWM
-control
+This is a test sketch for the BurgessWorld Custom Electronics
+ESP32 and NodeMCU Quad Motor and Servo Shields.
 
-For use with the Adafruit Motor Shield v2 
----->	http://www.adafruit.com/products/1438
+https://www.tindie.com/products/cburgess129/quad-motor-servo-shield-for-esp32-project-board/
+https://www.tindie.com/products/cburgess129/quad-motor-servo-shield-for-wireless-dev-board/
+
+The sketch will slowly ramp all 4 motors up and down to maximum speed.
 */
 
 #include <Wire.h>
