@@ -3,7 +3,7 @@
  *  thingspeak.com channel every 15 minutes.  
  *  It assumes a GREEN LED is attached to pin 5, and a RED LED is attached to pin 13.
  *  The LEDs can be disabled by commenting out "#define EnableLEDs" in the sketch below
- *  It is based on the ESP8266 wifi library available here:  https://github.com/itead/ITEADLIB_Arduino_WeeESP8266
+ *  It is based on a modified version of the ESP8266 wifi library available here:  https://github.com/cburgess5294/BurgessWorld/blob/master/ITEADLIB_Arduino_WeeESP8266-master_BW.zip
  *  The DHT library available here:  https://github.com/adafruit/DHT-sensor-library/archive/master.zip
  *  And the Adadruit sensor library available here:  https://github.com/adafruit/Adafruit_Sensor/archive/master.zip
  *  The sketch takes a sensor reading every 15 minutes and uploads it to the defined thingspeek channel
@@ -26,15 +26,15 @@
 #define RED 13
 
 //define wifi SSID and password
-#define SSID        "WIFI_SSID_HERE"
-#define PASSWORD    "WIFI_PASSWORD_HERE"
+#define SSID        "BURGESSWORLD1"
+#define PASSWORD    "thisistherouterpassword"
 
 //define thingspeak address and port
 #define HOST_NAME   "api.thingspeak.com"
 #define HOST_PORT   (80)
 
 //define thingspeek channel write key
-#define channelKey "YOUR CHANNEL WRITE API KEY"
+#define channelKey "921QR0W64PY0N9BY"
 
 // Define DHT Sensor type - uncomment whatever type you're using
 //#define DHTTYPE DHT11   // DHT 11
@@ -66,7 +66,7 @@ DHT dht(DHTPIN, DHTTYPE);
 bool connectStat;
 int failCount;
 bool espPresent = false;
-int sleepTime = 900000;  //15 minute sleep time
+int32_t sleepTime = 900000;  //15 minute sleep time
 
 void setup() {
   Serial.begin(57600);
@@ -75,23 +75,31 @@ void setup() {
   //set pin mode for status indicator LED pins
   pinMode(GREEN, OUTPUT);
   pinMode(RED, OUTPUT);
-   
-  //set pin mode for DHT22 output pin
-  pinMode(DHTPIN, INPUT_PULLUP);
+  //test LEDs
+  Serial.println("test LEDs");
+  flashLED(GREEN, 2);
+  flashLED(RED, 2);
 
+  //set pin mode for DHT22 output pin
+  //pinMode(DHTPIN, INPUT_PULLUP);
+  
   //SET ESP RESET PIN TO OUTPUT
   pinMode(ESPRESETPIN, OUTPUT);
 
+  //flush the serial buffer
+  flushSerial();
+  
   //reset ESP8266
   digitalWrite(ESPRESETPIN, LOW);
-  delay(20);
+  delay(300);
   digitalWrite(ESPRESETPIN, HIGH);
-
+  delay(200);
+  for (int i = 0; i < 200; i++)
+  {
+  Serial1.read();
+  }
   //wait for ESP status
-  delay(6000);
-  flushSerial();
-  Serial1.println("AT");
-  if (recFind("OK", 5000)){
+  if (recFind("ready", 5000)){
     Serial.println(F("Ready"));
     //set ESP8266 to station mode
     if (wifi.setOprToStation()){
@@ -109,7 +117,8 @@ void setup() {
     Serial.println(F("...verify ESP LED activity"));
     flashLED(RED, 5);
   }
-
+// Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+  dht.begin();
 }
 
 void loop() {
@@ -140,7 +149,7 @@ void loop() {
 
 //function to flush software serial read buffer
 void flushSerial(){
-    while (Serial1.available() > 0){
+    while (Serial1.available() >= 1){
       Serial1.read();
     }
 }
@@ -164,7 +173,7 @@ bool recFind(String target, uint32_t timeout)
   String rdBuff = "";
   unsigned long startMillis = millis();
     while (millis() - startMillis < timeout){
-      while (Serial1.available() >1){
+      while (Serial1.available() >=1){
         rdChar = Serial1.read();
         rdBuff += rdChar;
         if (rdBuff.indexOf(target) != -1) {
@@ -186,10 +195,18 @@ void initEsp(){
   bool espReady = false;
   bool resetStatus = false;
   while (!resetStatus){
+    //flush the serial buffer
+    flushSerial();
     //reset ESP
+    Serial.println("reset ESP");
     digitalWrite(ESPRESETPIN, LOW);
     delay(300);
     digitalWrite(ESPRESETPIN, HIGH);
+    delay(200);
+    for (int i = 0; i < 200; i++)
+    {
+    Serial1.read();
+    }
     //wait for esp ready
     if (recFind("ready", 5000)){
       Serial.println(F("ESP Ready"));
@@ -204,7 +221,7 @@ void initEsp(){
     if (espReady){
       //wait for wifi connection
       bool wifiJoined = false;
-      if (recFind("GOT IP", 5000)){
+      if (recFind("GOT IP", 10000)){
         wifiJoined = true;
         } 
       if (wifiJoined){
@@ -253,28 +270,21 @@ void initEsp(){
 }
 
 struct reading readSensor(){
-  uint8_t sumReadHUM = 0;
-  uint8_t sumReadTMP = 0;
+  uint8_t readHUM = 0;
+  uint8_t readTMP = 0;
   uint8_t trashReadHUM = 0;
   uint8_t trashReadTMP = 0;
-  //Enable DHT22 VCC pin
-  pinMode(DHTPIN, INPUT);
-  delay(100);
   Serial.println(F("read sensor"));
   //read sensor and discard first reading
-  trashReadTMP += dht.readTemperature(true);
-  trashReadHUM += dht.readHumidity();
+  trashReadTMP = dht.readTemperature(true);
+  trashReadHUM = dht.readHumidity();
   delay(2200);
-  //read sensor 2 more times and average
-  sumReadTMP += dht.readTemperature(true);
-  sumReadHUM += dht.readHumidity();
-  delay(2200);
-  sumReadTMP += dht.readTemperature(true);
-  sumReadHUM += dht.readHumidity();
-  pinMode(DHTPIN, INPUT_PULLUP);
+  //read sensor again
+  readTMP = dht.readTemperature(true);
+  readHUM = dht.readHumidity();
   //add readings to struct and return
-  reading_r.h = (sumReadHUM / 2);
-  reading_r.f = (sumReadTMP / 2);
+  reading_r.h = (readHUM);
+  reading_r.f = (readTMP);
   Serial.println(reading_r.h);
   Serial.println(reading_r.f);
   return reading_r;
