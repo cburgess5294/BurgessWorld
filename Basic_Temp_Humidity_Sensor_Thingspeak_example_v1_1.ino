@@ -6,7 +6,7 @@
  *  thingspeak.com channel every 15 minutes.  
  *  It assumes a GREEN LED is attached to pin 5, and a RED LED is attached to pin 13.
  *  The LEDs can be disabled by commenting out "#define EnableLEDs" in the sketch below
- *  It is based on the ESP8266 wifi library available here:  https://github.com/itead/ITEADLIB_Arduino_WeeESP8266
+ *  It is based on a modified version of the ESP8266 wifi library available here:  https://github.com/cburgess5294/BurgessWorld/blob/master/ITEADLIB_Arduino_WeeESP8266-master_BW.zip
  *  The DHT library available here:  https://github.com/adafruit/DHT-sensor-library/archive/master.zip
  *  And the Adadruit sensor library available here:  https://github.com/adafruit/Adafruit_Sensor/archive/master.zip
  *  The sketch takes a sensor reading every 15 minutes and uploads it to the defined thingspeek channel
@@ -69,7 +69,7 @@ DHT dht(DHTPIN, DHTTYPE);
 bool connectStat;
 int failCount;
 bool espPresent = false;
-int sleepTime = 900000;  //15 minute sleep time
+int32_t sleepTime = 900000;  //15 minute sleep time
 
 void setup() {
   Serial.begin(57600);
