@@ -29,15 +29,15 @@
 #define RED 13
 
 //define wifi SSID and password
-#define SSID        "BURGESSWORLD1"
-#define PASSWORD    "thisistherouterpassword"
+#define SSID        "YOUR_SSID"
+#define PASSWORD    "your_router_password"
 
 //define thingspeak address and port
 #define HOST_NAME   "api.thingspeak.com"
 #define HOST_PORT   (80)
 
 //define thingspeek channel write key
-#define channelKey "921QR0W64PY0N9BY"
+#define channelKey "your_thingspeak_api_write_key
 
 // Define DHT Sensor type - uncomment whatever type you're using
 //#define DHTTYPE DHT11   // DHT 11
