@@ -2,8 +2,11 @@
  MODIFIED BY C BURGESS <flamingpinto@gmail.com>
  Re-released un the GNU General Public License
 
- This sketch has been modified to work on the ESP32.  All
- PROGMEM features have been removed and replaced by String
+ This example has been modified to work on ESP8266 Dev Board, ESP32 Project Board and 
+ Arduino-Teensy boards available from the BurgessWorld Custom Electronics Tindie store:
+ https://tindie.com/stores/cburgess129.
+ 
+ All PROGMEM functions have been removed and replaced by String
  operations where appropriate, to allow for maximum compatibility.
  I am sure there is plenty of room for improvement by someone
  more knowlegable than myself.
