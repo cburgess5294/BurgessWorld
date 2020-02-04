@@ -18,9 +18,15 @@
 /**
  * Channel scanner
  *
- * Example to detect interference on the various channels available.
+ * Example to print configuration of NRF24L01+ module and 
+ * detect interference on the various channels available.
  * This is a good diagnostic tool to check whether you're picking a
  * good channel for your application.
+ *
+ * Requires installation of the RF24 Arduino Library along with ESP32
+ * and ESP8266 boards manager.
+ *
+ * Select DO IT Dev Kit V1 from boards menu
  *
  * Inspired by cpixip.
  * See http://arduino.cc/forum/index.php/topic,54795.0.html
