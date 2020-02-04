@@ -1,5 +1,5 @@
 /*
- MODIFIED BY C BURGESS <flamingpinto@gmail.com>
+ MODIFIED BY C BURGESS <cburgess@burgessworld.com>
  Re-released un the GNU General Public License
 
  This example has been modified to work on ESP8266 Dev Board, ESP32 Project Board and 
