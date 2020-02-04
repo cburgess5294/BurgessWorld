@@ -5,11 +5,20 @@
 /**
  * Example for efficient call-response using ack-payloads 
  *
- * This example continues to make use of all the normal functionality of the radios including
+ * This example has been modified to work on ESP8266 Dev Board, ESP32 Project Board and 
+ * Arduino-Teensy boards available from the BurgessWorld Custom Electronics Tindie store:
+ * https://tindie.com/stores/cburgess129
+ 
+ * It makes use of all the normal functionality of the radios including
  * the auto-ack and auto-retry features, but allows ack-payloads to be written optionally as well.
  * This allows very fast call-response communication, with the responding radio never having to 
  * switch out of Primary Receiver mode to send back a payload, but having the option to if wanting
  * to initiate communication instead of respond to a commmunication.
+ *
+ * Requires installation of the RF24 Arduino Library along with ESP32
+ * and ESP8266 boards manager.
+ *
+ * Select DO IT Dev Kit V1 from boards menu
  */
  
 
