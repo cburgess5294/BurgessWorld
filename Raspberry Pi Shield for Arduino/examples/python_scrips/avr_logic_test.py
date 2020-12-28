@@ -11,6 +11,7 @@ on = 0
 GPIO.setup(INPUT_PIN, GPIO.IN)           # Set our input pin to be an input
 GPIO.setup(OUTPUT_PIN, GPIO.OUT)
 GPIO.output(OUTPUT_PIN, GPIO.LOW)
+
 # Start a loop that never ends
 print "blinking LED on GPIO13 in response to HIGH signal from AVR pin D6"
 while True:
