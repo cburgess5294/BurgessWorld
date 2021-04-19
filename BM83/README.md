@@ -1,4 +1,4 @@
-Repository for files related to BM83 boards by BurgessWorld Custom Electronics
+<B>Repository for files related to BM83 boards by BurgessWorld Custom Electronics</B>
 
 Upload one of the example CONFIG HEX files, depending on your output configuration along with the DSP and GFP firmware files to configure the BM83 board.
 
