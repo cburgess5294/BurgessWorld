@@ -7,11 +7,10 @@ Unzip the Turnkeu files into a folder
 
 Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 
-TO UPDATE FIRMWARE AND CONFIG VIA NATIVE USB:
-
-  Connect a USB-breakout board as shown in the configuration image from the configuration subfolder.
-  
-  Connect a USB cable to your computer.
+<B>TO UPDATE FIRMWARE AND CONFIG VIA NATIVE USB:</B>
+<P>
+  Connect a USB-breakout board as shown in the configuration image from the configuration subfolder.<P>
+  Connect a USB cable to your computer.<P>
   
   Open the USB isupdate.exe tool located in the IS2083_Turnkey_1.2.0 \package IS2083 Turnkey_1.2.0\Tools\isupdate\
   
