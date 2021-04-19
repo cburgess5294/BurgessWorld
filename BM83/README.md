@@ -41,6 +41,6 @@ Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 
 <B>Design Considerations</B>
 <ul>
-<li>Keep wires short when connecting I2S devices.
+<li>Keep wires short when connecting I2S devices<br>
 I2S is susceptable to interferrance when using long wires.  Keep your connections as short as possible and you may have to seperate the wires or use shielded wires to prevent interferrence.  If you are experiencing cracling/static/hum in the output of an I2S DAC, it might be because of the wires.
 </ul>
