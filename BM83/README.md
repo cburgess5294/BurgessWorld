@@ -48,5 +48,6 @@ If powering your amplifier from the BATT OUT connection, keep in mind that the M
 Also consider that the voltage at BATT OUT is the battery voltage which is <4.2v and typically between 3.4-3.9V.  Ensure that any device you power from this connector can work from that voltage.
 <li>Match your amplifier and speakers to your project.<br>
 A small amplifier like the one linked here:  https://www.amazon.com/gp/product/B081YSYGLS/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1  is good for powering 3-5W speakers.  If can also be powered by the BATT OUT connector and provides a nice volume level.<br>
-  
+<li>Don't use a big battery if you plan to charge it via the BM83 built-in charging circuit.<br>
+The BM83 LiPo charging circuit can provide up to 350ma of charging current.  This is sufficient to charge a small LiPo battery.  I use a 500mah battery in my 5W+5W portable speaker and it can last 10+ hours and charges quickly.  If you want to use a large LiPo battery in your project, plan to provide an external charging circuit.
 </ul>
