@@ -8,28 +8,27 @@ Unzip the Turnkeu files into a folder
 Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 
 <B>TO UPDATE FIRMWARE AND CONFIG VIA NATIVE USB:</B>
-<P>
-  Connect a USB-breakout board as shown in the configuration image from the configuration subfolder.<P>
-  Connect a USB cable to your computer.<P>
+<ul>
+<li>Connect a USB-breakout board as shown in the configuration image from the configuration subfolder.<P>
+<li>Connect a USB cable to your computer.<P>
   
-  Open the USB isupdate.exe tool located in the IS2083_Turnkey_1.2.0 \package IS2083 Turnkey_1.2.0\Tools\isupdate\
+<li>Open the USB isupdate.exe tool located in the IS2083_Turnkey_1.2.0 \package IS2083 Turnkey_1.2.0\Tools\isupdate\
   
-  Make sure USB HID is shown in the Port selection and click the CONNECT button.  You will get a connect indication in the window below
+<li>Make sure USB HID is shown in the Port selection and click the CONNECT button.  You will get a connect indication in the window below
   
-  Set image num to 3
+<li>Set image num to 3
   
-  Click the top BROWSE button next to the field marked Images
+<li>Click the top BROWSE button next to the field marked Images
   
-  Select a CONFIG HEX file along with the DPS and GFP firmware HEX files (total of 3 files selected) and click open
+<li>Select a CONFIG HEX file along with the DPS and GFP firmware HEX files (total of 3 files selected) and click open
   
-  Click the UPDATE button next to the BROWSE button
+<li>Click the UPDATE button next to the BROWSE button
   
-  When prompted, select yes or no to retain connected devices list or to discard
+<li>When prompted, select yes or no to retain connected devices list or to discard
   
-  Once the update is completed, click DISCONNECT
-  
-  The firmware update is complete
-  
+<li>Once the update is completed, click DISCONNECT
+<li>The firmware update is complete
+</ul>
   
 <B>TO TO UPDATE FIRMWARE VIA USB-SERIAL ADAPTER:</B>
 
