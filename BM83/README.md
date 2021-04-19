@@ -6,7 +6,7 @@ Download the IS2083_TurnKey_1.2.0 zip file from the Microchip website:  https://
 Unzip the Turnkeu files into a folder
 Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 
-TO upload firmware and config via USB:
+TO UPDATE FIRMWARE AND CONFIG VIA NATIVE USB:
 
   Connect a USB-breakout board as shown in the configuration image from the configuration subfolder.
   
@@ -31,7 +31,7 @@ TO upload firmware and config via USB:
   The firmware update is complete
   
   
-TO upload firmware and config via USB-Serial:
+TO TO UPDATE FIRMWARE VIA USB-SERIAL ADAPTER:
 
   Connect a USB-serial adapter board as shown in the configuration image from the configuration subfolder.
   
