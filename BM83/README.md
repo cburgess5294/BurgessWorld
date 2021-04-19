@@ -43,7 +43,7 @@ Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 <ul>
 <li>Keep wires short when connecting I2S devices<br>
 I2S is susceptable to interferrance when using long wires.  Keep your connections as short as possible and you may have to seperate the wires or use shielded wires to prevent interferrence.  If you are experiencing cracling/static/hum in the output of an I2S DAC, it might be because of the wires.
-<li>Consider your powerource when selecting an amplifier<br>
+<li>Consider your power source when selecting an amplifier<br>
 If powering your amplifier from the BATT OUT connection, keep in mind that the MAX output current is 2A.  Attempting to power a high-power amp from this connection could result in damage to the board.
 Also consider that the voltage at BATT OUT is the battery voltage which is <4.2v and typically between 3.4-3.9V.  Ensure that any device you power from this connector can work from that voltage.
 </ul>
