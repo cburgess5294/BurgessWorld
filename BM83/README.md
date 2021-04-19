@@ -31,7 +31,7 @@ Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
   The firmware update is complete
   
   
-TO TO UPDATE FIRMWARE VIA USB-SERIAL ADAPTER:
+<B>TO TO UPDATE FIRMWARE VIA USB-SERIAL ADAPTER:</B>
 
   Connect a USB-serial adapter board as shown in the configuration image from the configuration subfolder.
   
