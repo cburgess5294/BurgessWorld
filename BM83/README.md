@@ -9,16 +9,27 @@ Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 TO upload firmware and config via USB:
 
   Connect a USB-breakout board as shown in the configuration image from the configuration subfolder.
+  
   Connect a USB cable to your computer.
+  
   Open the USB isupdate.exe tool located in the IS2083_Turnkey_1.2.0 \package IS2083 Turnkey_1.2.0\Tools\isupdate\
+  
   Make sure USB HID is shown in the Port selection and click the CONNECT button.  You will get a connect indication in the window below
+  
   Set image num to 3
+  
   Click the top BROWSE button next to the field marked Images
+  
   Select a CONFIG HEX file along with the DPS and GFP firmware HEX files (total of 3 files selected) and click open
+  
   Click the UPDATE button next to the BROWSE button
+  
   When prompted, select yes or no to retain connected devices list or to discard
+  
   Once the update is completed, click DISCONNECT
+  
   The firmware update is complete
+  
   
 TO upload firmware and config via USB-Serial:
   Connect a USB-serial adapter board as shown in the configuration image from the configuration subfolder.
