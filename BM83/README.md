@@ -46,7 +46,7 @@ I2S is susceptable to interferrance when using long wires.  Keep your connection
 <li>Consider your power source when selecting an amplifier<br>
 If powering your amplifier from the BATT OUT connection, keep in mind that the MAX output current is 2A.  Attempting to power a high-power amp from this connection could result in damage to the board.<br>
 Also consider that the voltage at BATT OUT is the battery voltage which is <4.2v and typically between 3.4-3.9V.  Ensure that any device you power from this connector can work from that voltage.
-<li>Match your amplifier and speakers to project.<br>
+<li>Match your amplifier and speakers to your project.<br>
 A small amplifier like the one linked here:  https://www.amazon.com/gp/product/B081YSYGLS/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1  is good for powering 3-5W speakers.  If can also be powered by the BATT OUT connector and provides a nice volume level.<br>
   
 </ul>
