@@ -4,6 +4,7 @@ Upload one of the example CONFIG HEX files, depending on your output configurati
 
 Download the IS2083_TurnKey_1.2.0 zip file from the Microchip website:  https://ww1.microchip.com/downloads/en/DeviceDoc/IS2083_Turnkey_1.2.0.zip
 Unzip the Turnkeu files into a folder
+
 Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 
 TO UPDATE FIRMWARE AND CONFIG VIA NATIVE USB:
