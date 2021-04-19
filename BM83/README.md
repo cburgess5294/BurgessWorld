@@ -54,4 +54,6 @@ The BM83 LiPo charging circuit can provide up to 350ma of charging current.  Thi
 Powering an amplifier and the BM83 from the same power source can introduce ground loops, resulting in a HUM in the audio output.  Keep audio grounds separate from the digital ground of the BM83 board if possible.<br>
 When using speakers without an amplifier in capless mode, the speaker gnd connections both go to the AOHPM pin, not the board ground.<br>
 When using an amplifier, the gnd pin of the amplifier connects to one of the gnd pins on the BM83 board and should provide an analog ground for the speakers.
+<li>If using an amplifier, select one with a shutdown or mute function<br>
+To avoid popping or static in audio output when powering up and shutting down the BM83, use an amplifier with a shutdown or mute pin and connect it to pin P26.  Closing the solder jumper on the bottom of the BM83 Breakout board connect P26 to gnd via a resistor, provding pull-down.  This pin can be toggled on in the config when the MB83 starts up, avoiding audio noise.  This can cut off the startup and shutdown tones somewhat, so it is a tradoff.  If your amplifier has a built-in pulldown, don't close the solder jumper.
 </ul>
