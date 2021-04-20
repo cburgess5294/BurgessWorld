@@ -48,8 +48,8 @@ If powering your amplifier from the BATT OUT connection, keep in mind that the M
 Also consider that the voltage at BATT OUT is the battery voltage which is <4.2v and typically between 3.4-3.9V.  Ensure that any device you power from this connector can work from that voltage.
 <li>Match your amplifier and speakers to your project<br>
 A small amplifier like the one linked here:  https://www.amazon.com/gp/product/B081YSYGLS/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1  is good for powering 3-5W speakers.  If can also be powered by the BATT OUT connector and provides a nice volume level.<br>
-<li>Don't use a big battery if you plan to charge it via the BM83 built-in charging circuit<br>
-The BM83 LiPo charging circuit can provide up to 350ma of charging current.  This is sufficient to charge a small LiPo battery.  I use a 500mah battery in my 5W+5W portable speaker and it can last 10+ hours and charges quickly.  If you want to use a large LiPo battery in your project, plan to provide an external charging circuit.
+<li>You don't need a big LiPo battery<br>
+The BM83 is extrememly energy-efficient.  Most of your power usage will go into the amplifier so keep it small if yo are going portable.  I use a 500mah battery in my 5W+5W portable speaker and it can last 10+ hours and charges quickly.
 <li>Avoid ground loops in your audio circuit<br>
 Powering an amplifier and the BM83 from the same power source can introduce ground loops, resulting in a HUM in the audio output.  Keep audio grounds separate from the digital ground of the BM83 board if possible.<br>
 When using speakers without an amplifier in capless mode, the speaker gnd connections both go to the AOHPM pin, not the board ground.<br>
