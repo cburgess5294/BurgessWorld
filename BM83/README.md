@@ -59,5 +59,8 @@ To avoid popping or static in audio output when powering up and shutting down th
 <li>Consider using an external I2S DAC for clean audio output<br>
 External I2S DACs can be had for a few dollars and are easily connected via 3-4 wires to the I2S pins of the BM83 Breakout Board.  This will provide the cleanest audio signal but will likely also require an external amplifier unless you buy one with an amplifier built-in.
 Using an external I2S DAC is almost a requirement when using the multispeaker functionality of the BM83 to chain multiple speakers via BLE to avoid introducing digital noise in the audio output<br>
-This I2S DAC is ready to go out of the box and has been tested with the BM83 Breakout Board.  It is also supported by the I2S CONFIG HEX file so it is easy to setup:  https://www.amazon.com/gp/product/B0781D3VQB/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+This I2S DAC is ready to go out of the box and has been tested with the BM83 Breakout Board.  It is also supported by the I2S CONFIG HEX file so it is easy to setup:  https://www.amazon.com/gp/product/B0781D3VQB/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1<br>
+<li>Using the Microchip Bluetooth Audio App<br>
+Ensure location services are enabled on your phone and the application has permission to use it or you will not be able to locate speakers.<br>
+If you have trouble locating speakers in the app, try setting the speaker to Master mode in the configuration.<br>
 </ul>
