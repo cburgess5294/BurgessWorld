@@ -39,6 +39,14 @@ Download the CONFIG HEX files, DSP, and GFP firmware files into a folder
 <li>The firmware update is complete
 </ul>
 
+<B>Editing BM83 Configuration</B>
+<ul>
+<li>The IS2083_Turnkey_1.2.0.zip archive contains a configuration editor tool located in the \tools\Config Tool\ folder.  This tool can be used to create custom configurations for the BM83 module.<br>
+<li>Using the tool, open the default configuration file or one of the pre-configured files to make changes to the behavoir of the BM83.
+<li>Referrence the documents found on the Microchip website when configuring BM83 options:  https://www.microchip.com/wwwproducts/en/BM83
+<li>Save the configuration when you are done and then upload it to the BM83 using one of the methods described above.
+</ul>
+
 <B>Design Considerations</B>
 <ul>
 <li>Keep wires short when connecting I2S devices<br>
