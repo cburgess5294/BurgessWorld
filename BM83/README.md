@@ -63,4 +63,5 @@ This I2S DAC is ready to go out of the box and has been tested with the BM83 Bre
 <li>Using the Microchip Bluetooth Audio App<br>
 Ensure location services are enabled on your phone and the application has permission to use it or you will not be able to locate speakers.<br>
 If you have trouble locating speakers in the app, try setting the speaker to Master mode in the configuration.<br>
+The application is included in the Turnkey software bundle for side-loading on devices that can't install it from the app store.<br>
 </ul>
