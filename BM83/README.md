@@ -54,7 +54,7 @@ The BM83 is extrememly energy-efficient.  Most of your power usage will go into 
 Powering an amplifier and the BM83 from the same power source can introduce ground loops, resulting in a HUM in the audio output.  Keep audio grounds separate from the digital ground of the BM83 board if possible.<br>
 When using speakers without an amplifier in capless mode, the speaker gnd connections both go to the AOHPM pin, not the board ground.<br>
 When using an amplifier, the gnd pin of the amplifier connects to one of the gnd pins on the BM83 board and should provide an analog ground for the speakers.
-<li>If using an amplifier, select one with a shutdown or mute function<br>
+<li>If using an amplifier without an external DAC, select one with a shutdown or mute function<br>
 To avoid popping or static in audio output when powering up and shutting down the BM83, use an amplifier with a shutdown or mute pin and connect it to pin P26.  Closing the solder jumper on the bottom of the BM83 Breakout board connects P26 to gnd via a resistor, provding pull-down.  This pin can be toggled on in the config when the MB83 starts up, avoiding audio noise.  This can cut off the startup and shutdown tones somewhat, so it is a tradoff.  If your amplifier has a built-in pulldown, don't close the solder jumper.
 <li>Consider using an external I2S DAC for clean audio output<br>
 External I2S DACs can be had for a few dollars and are easily connected via 3-4 wires to the I2S pins of the BM83 Breakout Board.  This will provide the cleanest audio signal but will likely also require an external amplifier unless you buy one with an amplifier built-in.
