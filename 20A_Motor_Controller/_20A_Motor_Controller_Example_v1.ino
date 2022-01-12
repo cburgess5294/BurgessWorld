@@ -35,48 +35,40 @@ void loop() {
   //spin motor forward at half-speed for 10 seconds
   analogWrite(in1Pin, 130);  // make IC1 output voltage at ~50% (motor+)
   analogWrite(in2Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
-  analogWrite(inhPin, HIGH); //enable IC1 and IC2
-  delay(10000);  //delay 10 seconds
+  digitalWrite(inhPin, HIGH); //enable IC1 and IC2
+  delay(3000);  //delay 10 seconds
 
   //spin motor forward at full-speed for 5 seconds
   analogWrite(in1Pin, 255);  // make IC1 output voltage at ~100% (motor+)
   analogWrite(in2Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
-  analogWrite(inhPin, HIGH); //enable IC1 and IC2
-  delay(5000);  //delay 5 seconds
-
-  //set motor to free-running
-  analogWrite(in1Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
-  analogWrite(in2Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
-  analogWrite(inhPin, HIGH); //enable IC1 and IC2
-  delay(2000);  //delay 2 seconds
+  delay(3000);  //delay 5 seconds
 
   //brake motor - setting both IC1 and IC2 to positive voltage makes motor stop spinning
   analogWrite(in1Pin, 255);  // make IC1 output voltage at ~100% (motor+)
   analogWrite(in2Pin, 255);  // make IC2 output voltage at ~100% (motor+)
-  analogWrite(inhPin, HIGH); //enable IC1 and IC2
+  delay(2000);  //delay 2 seconds
+
+   //set motor to free-running
+  analogWrite(in1Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
+  analogWrite(in2Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
   delay(2000);  //delay 2 seconds
   
  //spin motor backwards at half-speed for 10 seconds
   analogWrite(in1Pin, 0);  // make IC1 sink voltage (act as GND or motor-)
   analogWrite(in2Pin, 130);  // make IC2 output voltage at ~50% (motor+)
-  analogWrite(inhPin, HIGH); //enable IC1 and IC2
-  delay(10000);  //delay 10 seconds
+  delay(3000);  //delay 10 seconds
 
   //spin motor backwards at full-speed for 5 seconds
   analogWrite(in1Pin, 0);  // make IC1 sink voltage (act as GND or motor-)
   analogWrite(in2Pin, 255);  // make IC2 output voltage at ~50% (motor+)
-  analogWrite(inhPin, HIGH); //enable IC1 and IC2
-  delay(5000);  //delay 5 seconds
+  delay(3000);  //delay 5 seconds
   
   //set motor to freewheel
   analogWrite(in1Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
   analogWrite(in2Pin, 0);  // make IC2 sink voltage (act as GND or motor-)
-  analogWrite(inhPin, HIGH); //enable IC1 and IC2
-  delay(2000);  //delay 2 seconds
+  delay(3000);  //delay 2 seconds
 
   //disable motor controller
-  analogWrite(inhPin, LOW); //disable IC1 and IC2
+  digitalWrite(inhPin, LOW); //disable IC1 and IC2
   delay(5000);  //delay 5 seconds
 }
-
-
