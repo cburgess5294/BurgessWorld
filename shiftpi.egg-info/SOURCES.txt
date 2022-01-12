@@ -1,0 +1,7 @@
+shiftpi/__init__.py
+shiftpi/setup.py
+shiftpi/shiftpi.py
+shiftpi.egg-info/PKG-INFO
+shiftpi.egg-info/SOURCES.txt
+shiftpi.egg-info/dependency_links.txt
+shiftpi.egg-info/top_level.txt

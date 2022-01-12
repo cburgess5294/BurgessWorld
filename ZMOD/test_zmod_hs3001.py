@@ -49,6 +49,14 @@ def checkSensors():
     pass
     print("ZMOD FAILED")
   try:
+    sleep(2)
+    bus.write_quick(0x33) # wake ZMOD4510 sensor up and take a reading
+    print("ZMOD4510 OK")
+    ledBlue.on()
+  except:
+    pass
+    print("ZMOD4510 FAILED")
+  try:
     bus.write_quick(0x44) # wake sensor up and take a reading
     sleep(.040)
     readSensor =  bus.read_i2c_block_data(0x44,0,4) 
