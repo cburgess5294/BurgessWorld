@@ -7,7 +7,11 @@ stamp = 0;
 goodTrans = 0;
 badTrans = 0;
 spi = spidev.SpiDev()
+<<<<<<< HEAD
 spi.open(0, 0)
+=======
+spi.open(0, 1)
+>>>>>>> 5343e4047b8296d9229f3f5bc2ac65fb526ad1ee
 spi.max_speed_hz = 1000000
 try:
   while True:
